@@ -4,6 +4,7 @@ from tqdm import tqdm
 import argparse
 from PIL import Image
 from location.calculate_acc_rej import calculate_acc_rej
+from pii.calculate_metrics import calculate_pii
 
 
 if __name__ == '__main__':
@@ -16,4 +17,5 @@ if __name__ == '__main__':
     if(args.scenario=="location"):
         calculate_acc_rej()# analyse all the response file
         
-    #else PII
+    if (args.scenario=="pii"):
+        calculate_pii()
